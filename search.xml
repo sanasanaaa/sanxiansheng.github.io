@@ -4,6 +4,164 @@
   
     
     <entry>
+      <title>koa01</title>
+      <link href="/2019/06/25/koa%E5%AD%A6%E4%B9%A001/"/>
+      <url>/2019/06/25/koa%E5%AD%A6%E4%B9%A001/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> koa </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>egg学习day03</title>
+      <link href="/2019/06/25/egg%E5%AD%A6%E4%B9%A0day03/"/>
+      <url>/2019/06/25/egg%E5%AD%A6%E4%B9%A0day03/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> eggjs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>egg学习day04</title>
+      <link href="/2019/06/25/egg%E5%AD%A6%E4%B9%A0day04/"/>
+      <url>/2019/06/25/egg%E5%AD%A6%E4%B9%A0day04/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> eggjs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>egg学习day05</title>
+      <link href="/2019/06/25/egg%E5%AD%A6%E4%B9%A0day05/"/>
+      <url>/2019/06/25/egg%E5%AD%A6%E4%B9%A0day05/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> eggjs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>egg学习day06</title>
+      <link href="/2019/06/25/egg%E5%AD%A6%E4%B9%A0day06/"/>
+      <url>/2019/06/25/egg%E5%AD%A6%E4%B9%A0day06/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> eggjs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>egg学习day07</title>
+      <link href="/2019/06/25/egg%E5%AD%A6%E4%B9%A0day07/"/>
+      <url>/2019/06/25/egg%E5%AD%A6%E4%B9%A0day07/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> -node -egg.js </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> eggjs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>egg学习day02</title>
+      <link href="/2019/06/25/egg%E5%AD%A6%E4%B9%A0day02/"/>
+      <url>/2019/06/25/egg%E5%AD%A6%E4%B9%A0day02/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> eggjs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>egg学习day01</title>
+      <link href="/2019/06/25/egg%E5%AD%A6%E4%B9%A0day01/"/>
+      <url>/2019/06/25/egg%E5%AD%A6%E4%B9%A0day01/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><img src="../images/egg.png"><p>绿色虚线框中的所有组件组成了一个Worker，这就是egg.js中实际执行代码逻辑的进程，是一个node服务器。</p><ul><li>request进来后，先穿过中间件，自己定义的中间件都放在projectDir/app/middleware下，并在config中启用。</li><li>egg.js内置了egg-static中间件，将静态资源放在projectDir/app/public中，只会经过egg-static中间件之前的中间件，最后egg-static直接响应给客户端，不会到达其后的中间件以及Router。</li><li>如果不是public中的资源，将会穿越所有中间件，到达路由。一般所有的路由都放在router.js中，这个文件没有任何逻辑，而是直接指向一个处理请求的controller，只起到目录和索引的作用:</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> eggjs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于hexo的一些设置与使用next进行装饰</title>
       <link href="/2019/06/24/%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8next%E8%BF%9B%E8%A1%8C%E8%A3%85%E9%A5%B0/"/>
       <url>/2019/06/24/%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8next%E8%BF%9B%E8%A1%8C%E8%A3%85%E9%A5%B0/</url>
