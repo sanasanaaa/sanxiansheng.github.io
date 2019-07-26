@@ -88,15 +88,20 @@
 
 
 
+<meta name="description" content="绿色虚线框中的所有组件组成了一个Worker，这就是egg.js中实际执行代码逻辑的进程，是一个node服务器。  request进来后，先穿过中间件，自己定义的中间件都放在projectDir/app/middleware下，并在config中启用。 egg.js内置了egg-static中间件，将静态资源放在projectDir/app/public中，只会经过egg-static中间件之">
 <meta name="keywords" content="eggjs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="egg学习day03">
-<meta property="og:url" content="http://sanasan.top/2019/06/25/egg学习day03/index.html">
+<meta property="og:title" content="egg学习 项目结构">
+<meta property="og:url" content="http://sanasan.top/2019/06/25/egg学习/index.html">
 <meta property="og:site_name" content="Sanasan">
+<meta property="og:description" content="绿色虚线框中的所有组件组成了一个Worker，这就是egg.js中实际执行代码逻辑的进程，是一个node服务器。  request进来后，先穿过中间件，自己定义的中间件都放在projectDir/app/middleware下，并在config中启用。 egg.js内置了egg-static中间件，将静态资源放在projectDir/app/public中，只会经过egg-static中间件之">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-25T07:05:22.039Z">
+<meta property="og:image" content="http://sanasan.top/images/egg.png">
+<meta property="og:updated_time" content="2019-07-09T04:53:51.352Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="egg学习day03">
+<meta name="twitter:title" content="egg学习 项目结构">
+<meta name="twitter:description" content="绿色虚线框中的所有组件组成了一个Worker，这就是egg.js中实际执行代码逻辑的进程，是一个node服务器。  request进来后，先穿过中间件，自己定义的中间件都放在projectDir/app/middleware下，并在config中启用。 egg.js内置了egg-static中间件，将静态资源放在projectDir/app/public中，只会经过egg-static中间件之">
+<meta name="twitter:image" content="http://sanasan.top/images/egg.png">
 
 
 
@@ -126,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://sanasan.top/2019/06/25/egg学习day03/">
+  <link rel="canonical" href="http://sanasan.top/2019/06/25/egg学习/">
 
 
 
 
 
-  <title>egg学习day03 | Sanasan</title>
+  <title>egg学习 项目结构 | Sanasan</title>
   
 
 
@@ -313,7 +318,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sanasan.top/2019/06/25/egg学习day03/">
+    <link itemprop="mainEntityOfPage" href="http://sanasan.top/2019/06/25/egg学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Yongfei">
@@ -330,7 +335,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">egg学习day03</h1>
+          <h1 class="post-title" itemprop="name headline">egg学习 项目结构</h1>
         
 
         <div class="post-meta">
@@ -347,7 +352,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-25T14:46:20+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-25T12:38:40+08:00">
                 2019-06-25
               </time>
             
@@ -363,8 +368,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-25T15:05:22+08:00">
-                2019-06-25
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-09T12:53:51+08:00">
+                2019-07-09
               </time>
             
           </span>
@@ -378,8 +383,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/06/25/egg学习day03/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/25/egg学习day03/" itemprop="commentCount"></span>
+                <a href="/2019/06/25/egg学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/25/egg学习/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,7 +406,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  649
                 </span>
               
 
@@ -417,7 +422,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -438,7 +443,49 @@
       
 
       
-        
+        <img src="http://sanasan.top/images/egg.png">
+
+<p>绿色虚线框中的所有组件组成了一个Worker，这就是egg.js中实际执行代码逻辑的进程，是一个node服务器。</p>
+<ul>
+<li>request进来后，先穿过中间件，自己定义的中间件都放在projectDir/app/middleware下，并在config中启用。</li>
+<li>egg.js内置了egg-static中间件，将静态资源放在projectDir/app/public中，只会经过egg-static中间件之前的中间件，最后egg-static直接响应给客户端，不会到达其后的中间件以及Router。</li>
+<li>如果不是public中的资源，将会穿越所有中间件，到达路由。一般所有的路由都放在router.js中，这个文件没有任何逻辑，而是直接指向一个处理请求的controller，只起到目录和索引的作用:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">egg-project</span><br><span class="line">├── package.json</span><br><span class="line">├── app.js (可选)</span><br><span class="line">├── agent.js (可选)</span><br><span class="line">├── app</span><br><span class="line">|   ├── router.js</span><br><span class="line">│   ├── controller</span><br><span class="line">│   |   └── home.js</span><br><span class="line">│   ├── service (可选)</span><br><span class="line">│   |   └── user.js</span><br><span class="line">│   ├── middleware (可选)</span><br><span class="line">│   |   └── response_time.js</span><br><span class="line">│   ├── schedule (可选)</span><br><span class="line">│   |   └── my_task.js</span><br><span class="line">│   ├── public (可选)</span><br><span class="line">│   |   └── reset.css</span><br><span class="line">│   ├── view (可选)</span><br><span class="line">│   |   └── home.tpl</span><br><span class="line">│   └── extend (可选)</span><br><span class="line">│       ├── helper.js (可选)</span><br><span class="line">│       ├── request.js (可选)</span><br><span class="line">│       ├── response.js (可选)</span><br><span class="line">│       ├── context.js (可选)</span><br><span class="line">│       ├── application.js (可选)</span><br><span class="line">│       └── agent.js (可选)</span><br><span class="line">├── config</span><br><span class="line">|   ├── plugin.js</span><br><span class="line">|   ├── config.default.js</span><br><span class="line">│   ├── config.prod.js</span><br><span class="line">|   ├── config.test.js (可选)</span><br><span class="line">|   ├── config.local.js (可选)</span><br><span class="line">|   └── config.unittest.js (可选)</span><br><span class="line">└── test</span><br><span class="line">    ├── middleware</span><br><span class="line">    |   └── response_time.test.js</span><br><span class="line">    └── controller</span><br><span class="line">        └── home.test.js</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>如上，由框架约定的目录：</p>
+<ul>
+<li><p>app/router.js 用于配置 URL 路由规则，具体参见 Router。</p>
+</li>
+<li><p>app/controller/** 用于解析用户的输入，处理后返回相应的结果，具体参见 Controller。</p>
+</li>
+<li><p>app/service/** 用于编写业务逻辑层，可选，建议使用，具体参见 Service。</p>
+</li>
+<li><p>app/middleware/** 用于编写中间件，可选，具体参见 Middleware。</p>
+</li>
+<li><p>app/public/** 用于放置静态资源，可选，具体参见内置插件 egg-static。</p>
+</li>
+<li><p>app/extend/** 用于框架的扩展，可选，具体参见框架扩展。</p>
+</li>
+<li><p>config/config.{env}.js 用于编写配置文件，具体参见配置。</p>
+</li>
+<li><p>config/plugin.js 用于配置需要加载的插件，具体参见插件。</p>
+</li>
+<li><p>test/** 用于单元测试，具体参见单元测试。</p>
+</li>
+<li><p>app.js 和 agent.js 用于自定义启动时的初始化工作，可选，具体参见启动自定义。关于agent.js的作用参见Agent机制。<br>由内置插件约定的目录：</p>
+</li>
+<li><p>app/public/** 用于放置静态资源，可选，具体参见内置插件 egg-static。</p>
+</li>
+<li><p>app/schedule/** 用于定时任务，可选，具体参见定时任务。</p>
+</li>
+</ul>
+<p>若需自定义自己的目录规范，参见 Loader API</p>
+<ul>
+<li>app/view/** 用于放置模板文件，可选，由模板插件约定，具体参见模板渲染。</li>
+<li>app/model/** 用于放置领域模型，可选，由领域类相关插件约定，如 egg-sequelize。</li>
+</ul>
+
       
     </div>
     
@@ -477,8 +524,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/25/egg学习day04/" rel="next" title="egg学习day04">
-                <i class="fa fa-chevron-left"></i> egg学习day04
+              <a href="/2019/06/24/关于hexo的一些设置与使用next进行装饰/" rel="next" title="关于hexo的一些设置与使用next进行装饰">
+                <i class="fa fa-chevron-left"></i> 关于hexo的一些设置与使用next进行装饰
               </a>
             
           </div>
@@ -487,8 +534,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/25/koa学习01/" rel="prev" title="koa01">
-                koa01 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/09/egg学习应用结构和内置对象/" rel="prev" title="关于egg应用结构和内置对象">
+                关于egg应用结构和内置对象 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -569,7 +616,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -580,7 +627,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -591,7 +638,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -677,7 +724,7 @@
        <span class="post-meta-item-text">Site words total count&#58;</span>
      
 	-->
-    <span title="Site words total count">2.1k</span>
+    <span title="Site words total count">4.3k</span>
   
 </div>
 <!--
@@ -824,9 +871,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://sanasan.top/2019/06/25/egg学习day03/';
-          this.page.identifier = '2019/06/25/egg学习day03/';
-          this.page.title = 'egg学习day03';
+          this.page.url = 'http://sanasan.top/2019/06/25/egg学习/';
+          this.page.identifier = '2019/06/25/egg学习/';
+          this.page.title = 'egg学习 项目结构';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://sanasan.disqus.com/embed.js';
