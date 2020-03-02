@@ -36,25 +36,13 @@
     
     
     <entry>
-      <title>关于hexo的一些设置与使用next进行装饰</title>
+      <title></title>
       <link href="/2019/06/24/%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8next%E8%BF%9B%E8%A1%8C%E8%A3%85%E9%A5%B0/"/>
       <url>/2019/06/24/%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8next%E8%BF%9B%E8%A1%8C%E8%A3%85%E9%A5%B0/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://www.jianshu.com/p/9f0e90cc32c2" target="_blank" rel="noopener">https://www.jianshu.com/p/9f0e90cc32c2</a><br><a href="https://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">https://blog.csdn.net/qq_33699981/article/details/72716951</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p>title: hexo github 搭建个人博客<br>tags: hexo<br>categories: hexo<br>top: 1</p>]]></content>
       
       
-      <categories>
-          
-          <category> hexo </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
       
     </entry>
     
