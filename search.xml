@@ -37,10 +37,10 @@
     
     <entry>
       <title>hexo github 搭建个人博客</title>
-      <link href="/2019/06/24/%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8next%E8%BF%9B%E8%A1%8C%E8%A3%85%E9%A5%B0/"/>
-      <url>/2019/06/24/%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8next%E8%BF%9B%E8%A1%8C%E8%A3%85%E9%A5%B0/</url>
+      <link href="/2019/06/24/hexo/"/>
+      <url>/2019/06/24/hexo/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="安装node-git"><a href="#安装node-git" class="headerlink" title="安装node git"></a>安装node git</h1><pre><code>安装过程略查看是否安装成功 git version node -vnpm -v</code></pre><h1 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h1><p>在准备好后,开始使用npm 安装 Hexo </p><pre><code>npm install -g hexo-cli</code></pre><p>安装Hexo后,新建Hexo项目,并安装依赖</p><pre><code>hexo init myblogcd myblognpm install</code></pre><p>新建完成后 文件夹目录:</p><pre><code>├── _config.yml # 网站的配置信息。 ├── package.json├── scaffolds # 模版文件夹├── source  # 资源文件夹，除 _posts 文件，其他以下划线_开头的文件或者文件夹不会被编译打包到public文件夹|   ├── _drafts # 草稿文件|   └── _posts # 文章Markdowm文件 └── themes  # 主题文件夹</code></pre><p>运行 hexo server 或者 hexo s 启动 然后在 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 查看效果</p><h1 id="github-静态地址"><a href="#github-静态地址" class="headerlink" title="github 静态地址"></a>github 静态地址</h1><p>首先 Github 每个用户只能使用一个同名仓库来托管一个静态站点</p><pre><code>先创建一个新的仓库 仓库名必须是 用户名.github.io</code></pre><h2 id="github部署"><a href="#github部署" class="headerlink" title="github部署"></a>github部署</h2><p>1 首先在项目根目录下的_config.yml配置文件配置参数 添加如下</p><pre><code>deploy:    type:git    repo:        github:https://github,com/sanxiansheng/sanxiansheng.github.io.git    branch:master</code></pre><p>2 安装部署插件 hexo-deployer-git –save</p><pre><code>npm install hexo-deployer-git --save</code></pre><p>3 执行部署</p><pre><code>hexo clean 清除缓存文件(db.json)和已生成的静态文件hexo g -d</code></pre><h1 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h1><p>在万网注册，在控制台找到购买的域名点，右侧的解析按钮进去解析列表<br>点右边的“添加记录”添加两条 CNAME 类型的记录，记录值为github地址</p><p>记录添加完后就要到 Github 设置绑定域名,博客仓库点 Setting,GitHub Pages 保存自己的域名，有时候不能save，也可以在 用户名.github.io 的仓库根目录/source 目录下手动创建一个 CNAME 文件，内容为自己的域名地址，然后再去绑定就可以了</p>]]></content>
       
       
       <categories>
