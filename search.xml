@@ -36,13 +36,25 @@
     
     
     <entry>
-      <title></title>
+      <title>hexo github 搭建个人博客</title>
       <link href="/2019/06/24/%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8next%E8%BF%9B%E8%A1%8C%E8%A3%85%E9%A5%B0/"/>
       <url>/2019/06/24/%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8next%E8%BF%9B%E8%A1%8C%E8%A3%85%E9%A5%B0/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p>title: hexo github 搭建个人博客<br>tags: hexo<br>categories: hexo<br>top: 1</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
       
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
