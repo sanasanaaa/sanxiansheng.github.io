@@ -367,8 +367,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-10T09:59:50+08:00">
-                2019-07-10
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-09T15:05:45+08:00">
+                2020-03-09
               </time>
             
           </span>
@@ -936,7 +936,7 @@ egg.js内置了egg-static中间
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sanasan.top/2020/03/02/Docker Jenkins node项目自动部署/">
+    <link itemprop="mainEntityOfPage" href="http://sanasan.top/2020/03/13/关于vue的双向数据绑定和$nexttick 关于dom更新的一些思考/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Yongfei">
@@ -955,14 +955,10 @@ egg.js内置了egg-static中间
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/02/Docker Jenkins node项目自动部署/" itemprop="url">Docker jenkins vue自动部署</a></h1>
+                <a class="post-title-link" href="/2020/03/13/关于vue的双向数据绑定和$nexttick 关于dom更新的一些思考/" itemprop="url">关于vue的双向数据绑定的简单理解和$nexttick 关于dom更新的一些理解</a></h1>
         
 
         <div class="post-meta">
-		
-			<i class="fa fa-thumb-tack"></i>
-			<font color="green">置顶</font>
-			<span class="post-meta-divider">|</span>
 		
           <span class="post-time">
             
@@ -972,8 +968,8 @@ egg.js内置了egg-static中间
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-02T14:08:45+08:00">
-                2020-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-13T12:45:54+08:00">
+                2020-03-13
               </time>
             
 
@@ -988,8 +984,8 @@ egg.js内置了egg-static中间
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-02T13:24:33+08:00">
-                2020-03-02
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-13T17:29:20+08:00">
+                2020-03-13
               </time>
             
           </span>
@@ -1003,8 +999,192 @@ egg.js内置了egg-static中间
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/03/02/Docker Jenkins node项目自动部署/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/03/02/Docker Jenkins node项目自动部署/" itemprop="commentCount"></span>
+                <a href="/2020/03/13/关于vue的双向数据绑定和$nexttick 关于dom更新的一些思考/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/03/13/关于vue的双向数据绑定和$nexttick 关于dom更新的一些思考/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  653
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          vue的双向数据绑定vue采用的方式属于数据劫持+发布订阅模式：通过Object.defineProperty()来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。所以实现这个过程大概需要一下以下几点:
+1 创建一个数据监听器 监听数据对象包含的所有属性 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/13/关于vue的双向数据绑定和$nexttick 关于dom更新的一些思考/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+	<div>
+			
+	</div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sanasan.top/2020/03/09/gitlab搭建git服务器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Yongfei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/myphoto.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sanasan">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/09/gitlab搭建git服务器/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+		
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-09T13:16:27+08:00">
+                2020-03-09
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-09T13:16:27+08:00">
+                2020-03-09
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/03/09/gitlab搭建git服务器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/03/09/gitlab搭建git服务器/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1069,7 +1249,7 @@ egg.js内置了egg-static中间
           
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/02/Docker Jenkins node项目自动部署/#more" rel="contents">
+            <a class="btn" href="/2020/03/09/gitlab搭建git服务器/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1354,12 +1534,34 @@ egg.js内置了egg-static中间
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-04T12:29:20+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-04T13:47:14+08:00">
                 2020-03-04
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1670,6 +1872,10 @@ egg.js内置了egg-static中间
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1715,7 +1921,7 @@ egg.js内置了egg-static中间
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1726,7 +1932,7 @@ egg.js内置了egg-static中间
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1737,7 +1943,7 @@ egg.js内置了egg-static中间
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1823,7 +2029,7 @@ egg.js内置了egg-static中间
        <span class="post-meta-item-text">Site words total count&#58;</span>
      
 	-->
-    <span title="Site words total count">6.1k</span>
+    <span title="Site words total count">7k</span>
   
 </div>
 <!--

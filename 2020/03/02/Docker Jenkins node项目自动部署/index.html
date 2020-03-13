@@ -88,15 +88,18 @@
 
 
 
+<meta name="description" content="Docker原本服务器长时间运行 产生的问题: 1 手动部署 成本太高过程复杂，有时候项目中一个很小的改动，在服务器上部署，要去修改很多个地方 2 服务器长时间的积累,内部文件 环境混乱 3 重装系统成本太高 不方便迁移 docker中的镜像和容器1 容器:个人理解，和虚拟机类似，但是与宿主主机共享操作系统内核，只提供一个隔离环境 或者称为沙箱 2 镜像:就像win10纯净版.rar文件，用来创建">
 <meta name="keywords" content="部署">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker jenkins vue自动部署">
 <meta property="og:url" content="http://sanasan.top/2020/03/02/Docker Jenkins node项目自动部署/index.html">
 <meta property="og:site_name" content="Sanasan">
+<meta property="og:description" content="Docker原本服务器长时间运行 产生的问题: 1 手动部署 成本太高过程复杂，有时候项目中一个很小的改动，在服务器上部署，要去修改很多个地方 2 服务器长时间的积累,内部文件 环境混乱 3 重装系统成本太高 不方便迁移 docker中的镜像和容器1 容器:个人理解，和虚拟机类似，但是与宿主主机共享操作系统内核，只提供一个隔离环境 或者称为沙箱 2 镜像:就像win10纯净版.rar文件，用来创建">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-02T05:24:33.602Z">
+<meta property="og:updated_time" content="2020-03-09T07:31:40.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker jenkins vue自动部署">
+<meta name="twitter:description" content="Docker原本服务器长时间运行 产生的问题: 1 手动部署 成本太高过程复杂，有时候项目中一个很小的改动，在服务器上部署，要去修改很多个地方 2 服务器长时间的积累,内部文件 环境混乱 3 重装系统成本太高 不方便迁移 docker中的镜像和容器1 容器:个人理解，和虚拟机类似，但是与宿主主机共享操作系统内核，只提供一个隔离环境 或者称为沙箱 2 镜像:就像win10纯净版.rar文件，用来创建">
 
 
 
@@ -335,10 +338,6 @@
 
         <div class="post-meta">
 		
-			<i class="fa fa-thumb-tack"></i>
-			<font color="green">置顶</font>
-			<span class="post-meta-divider">|</span>
-		
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -363,8 +362,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-02T13:24:33+08:00">
-                2020-03-02
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-09T15:31:40+08:00">
+                2020-03-09
               </time>
             
           </span>
@@ -401,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  228
                 </span>
               
 
@@ -438,7 +437,40 @@
       
 
       
-        
+        <h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><p>原本服务器长时间运行 产生的问题:<br> 1 手动部署 成本太高过程复杂，有时候项目中一个很小的改动，在服务器上部署，要去修改很多个地方<br> 2 服务器长时间的积累,内部文件 环境混乱<br> 3 重装系统成本太高 不方便迁移</p>
+<h2 id="docker中的镜像和容器"><a href="#docker中的镜像和容器" class="headerlink" title="docker中的镜像和容器"></a>docker中的镜像和容器</h2><p>1 容器:个人理解，和虚拟机类似，但是与宿主主机共享操作系统内核，只提供一个隔离环境 或者称为沙箱</p>
+<p>2 镜像:就像win10纯净版.rar文件，用来创建容器</p>
+<p>以下是docker容器和虚拟机的区别</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">Docker容器</th>
+<th align="center">虚拟机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">操作系统内核</td>
+<td align="right">与宿主机共享操作系统内核</td>
+<td align="center">需要在宿主的os上运行虚拟机os</td>
+</tr>
+<tr>
+<td align="left">存储大小</td>
+<td align="right">小</td>
+<td align="center">大</td>
+</tr>
+<tr>
+<td align="left">移植性</td>
+<td align="right">灵活</td>
+<td align="center">笨重</td>
+</tr>
+<tr>
+<td align="left">部署速度</td>
+<td align="right">快</td>
+<td align="center">较慢</td>
+</tr>
+</tbody></table>
+
       
     </div>
     
@@ -547,8 +579,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -565,7 +606,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -576,7 +617,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -587,7 +628,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -634,6 +675,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker"><span class="nav-number">1.</span> <span class="nav-text">Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#docker中的镜像和容器"><span class="nav-number">1.1.</span> <span class="nav-text">docker中的镜像和容器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -673,7 +730,7 @@
        <span class="post-meta-item-text">Site words total count&#58;</span>
      
 	-->
-    <span title="Site words total count">6.1k</span>
+    <span title="Site words total count">7k</span>
   
 </div>
 <!--

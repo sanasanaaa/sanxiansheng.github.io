@@ -4,6 +4,38 @@
   
     
     <entry>
+      <title>关于vue的双向数据绑定的简单理解和$nexttick 关于dom更新的一些理解</title>
+      <link href="/2020/03/13/%E5%85%B3%E4%BA%8Evue%E7%9A%84%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E5%92%8C$nexttick%20%E5%85%B3%E4%BA%8Edom%E6%9B%B4%E6%96%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/"/>
+      <url>/2020/03/13/%E5%85%B3%E4%BA%8Evue%E7%9A%84%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E5%92%8C$nexttick%20%E5%85%B3%E4%BA%8Edom%E6%9B%B4%E6%96%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="vue的双向数据绑定"><a href="#vue的双向数据绑定" class="headerlink" title="vue的双向数据绑定"></a>vue的双向数据绑定</h1><p><strong>vue采用的方式属于数据劫持+发布订阅模式：</strong><br>通过Object.defineProperty()来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。<br>所以实现这个过程大概需要一下以下几点:</p><pre><code>1 创建一个数据监听器 监听数据对象包含的所有属性 如果有数据变动，那就去通知订阅者2 实现一个指令解析器 对每个元素节点的指令进行扫描，根据指令替换数据(相互对应)，以及绑定相应的更新函数3 实现一个数据监听器和指令解析器之间的桥梁，让解析器收到监听器的数据变动的通知，然后去更新视图</code></pre><img src="./images/mvvm.png"><h1 id="关于Vue-this-nextTick-和DOM的更新"><a href="#关于Vue-this-nextTick-和DOM的更新" class="headerlink" title="关于Vue this.$nextTick 和DOM的更新"></a>关于Vue this.$nextTick 和DOM的更新</h1><p>官方文档说明:</p><p><strong>用法：在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM</strong><br><strong>想法:从绑定的数据发生改变，到更新视图，这个过程是异步的？</strong></p><h2 id="关于异步"><a href="#关于异步" class="headerlink" title="关于异步"></a>关于异步</h2><p>异步运行机制:<br>    (1)所有同步任务都在主线程上执行,形成一个执行栈<br>    (2)主线程之外，还存在一个“任务队列”。只要异步任务有了运行结果，就在“任务队列”中放置一个事件。<br>    (3)一旦“执行栈”中的所有同步任务执行完毕，系统就会读取“任务队列”，看看 还有那些时间，那些对应的异步任务这时候哦就结束了等待状态，进入执行栈，开始执行。<br>    (4)主线程不断重复（3）<br><img src="./images/js_event_loop.png"><br>ajax异步的过程<br><img src="./images/js_event_loop2.png"></p><p><strong>vue的响应式并不是数据改变后，DOM立即变化 而是按照一点的策略进行DOM更新</strong> 例子:</p><pre><code>//改变数据vm.message = &apos;changed&apos;//想要立即使用更新后的DOM。这样不行，因为设置message后DOM还没有更新console.log(vm.$el.textContent) // 并不会得到&apos;changed&apos;//这样可以，nextTick里面的代码会在DOM更新后执行Vue.nextTick(function(){console.log(vm.$el.textContent) //可以得到&apos;changed&apos;})</code></pre><p>简单总结下这块的过程：</p><p><strong>同步代码执行 -&gt; 查找异步队列，推入执行栈，执行Vue.nextTick[事件循环1] -&gt;查找异步队列，推入执行栈，执行Vue.nextTick[事件循环2]… 总之，异步是单独的一个tick，不会和同步在一个 tick 里发生，也是 DOM 不会马上改变的原因。</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2020/03/09/gitlab%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <url>/2020/03/09/gitlab%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于使用webpack</title>
       <link href="/2020/03/03/%E5%85%B3%E4%BA%8Ewebpack%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93%EF%BC%8Cvue%20cli3%E9%87%8C%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/"/>
       <url>/2020/03/03/%E5%85%B3%E4%BA%8Ewebpack%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93%EF%BC%8Cvue%20cli3%E9%87%8C%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/</url>
@@ -23,6 +55,12 @@
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>1 块级元素 占据其父元素(容器)的整个空间 ，因此创建一个’块’</p><pre><code>&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt; 标题级别 1-6&lt;div&gt;  &lt;form&gt; 表单 &lt;table&gt; 表格&lt;hr&gt; 水平分隔线&lt;ol&gt; 有序列表&lt;ul&gt; 无序列表&lt;li&gt;&lt;p&gt; 段落</code></pre><p>2 行内元素</p><pre><code>&lt;b&gt; &lt;i&gt; &lt;a&gt; &lt;img&gt; &lt;span&gt; &lt;sub&gt; &lt;sup&gt; &lt;strong&gt; &lt;em&gt;&lt;input&gt; &lt;button&gt; &lt;label&gt; &lt;select&gt; &lt;textarea&gt;</code></pre><h1 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h1><h2 id="1基本选择器"><a href="#1基本选择器" class="headerlink" title="1基本选择器"></a>1基本选择器</h2><pre><code>.calss  类选择器#id     id选择器*       通用选择器element 元素选择器</code></pre><h2 id="2组合选择器"><a href="#2组合选择器" class="headerlink" title="2组合选择器"></a>2组合选择器</h2><pre><code>E F            后代选择器E&gt;F            直接子代选择器E+F            相邻元素选择器E~F            兄弟元素选择器</code></pre><h2 id="3属性选择器"><a href="#3属性选择器" class="headerlink" title="3属性选择器"></a>3属性选择器</h2><pre><code>E[att]    选择具有att属性的E元素E[att=&quot;val&quot;]    选择具有att属性且属性值等于val的E元素E[att~=&quot;val&quot;]    选择具有att属性且属性值其中一个等于val的E元素（包含只有一个值且该值等于val的情况）E[att|=&quot;val&quot;]    选择具有att属性且属性值为以val开头并用连接符-分隔的字符串的E元素，如果属性值仅为val，也将被选择E[att^=&quot;val&quot;]    选择具有att属性且属性值为以val开头的字符串的E元素E[att$=&quot;val&quot;]    选择具有att属性且属性值为以val结尾的字符串的E元素E[att*=&quot;val&quot;]    选择具有att属性且属性值为包含val的字符串的E元素</code></pre><h2 id="4伪类选择器"><a href="#4伪类选择器" class="headerlink" title="4伪类选择器"></a>4伪类选择器</h2><pre><code>:link      a:link    选择所有未访问链接    :visited    a:visited    选择所有访问过的链接    :hover    a:hover    把鼠标放在链接上的状态    :active    a:active    选择正在活动链接    :focus    input:focus    选择元素输入后具有焦点</code></pre><h2 id="5伪元素选择器"><a href="#5伪元素选择器" class="headerlink" title="5伪元素选择器"></a>5伪元素选择器</h2><pre><code>::before/:before    在被选元素前插入内容。    需要使用 content 属性来指定要插入的内容。被插入的内容实际上不在文档树中。    ::after/:after    在选被元素后插入内容    其用法和特性与:before相似。    ::first-letter/:first-letter    匹配元素中文本的首字母。    被修饰的首字母不在文档树中。    ::first-line/:first-line    匹配元素中第一行的文本。    这个伪元素只能用在块元素中，不能用在内联元素中。</code></pre><h2 id="6其他"><a href="#6其他" class="headerlink" title="6其他"></a>6其他</h2><p><strong>关于:not()的用法</strong><br>假定有个列表，每个列表项都有一条底边线，但是最后一项不需要底边线。<br>     li:not(:last-child) {<br>        border-bottom: 1px solid #ddd;<br>    }<br>上述代码的意思是：给该列表中除最后一项外的所有列表项加一条底边线。是不是很方便。</p><p><strong>关于:nth-child()的用法</strong><br>要使E:nth-child(n)生效，E元素必须是某个元素的子元素，E的父元素最高是body，即E可以是body的子元素。:first-child、:last-child、:only-child、:nth-last-child(n)也是一样。<br>nth-child(n)括号里的n可以是一个数字，一个关键字，或者一个公式。<br>:nth-child(length) /<em>参数是具体数字 length为整数</em>/:nth-child(n) /<em>参数是n,n从0开始计算</em>/:nth-child(n<em>length) /</em>n的倍数选择，n从0开始算<em>/:nth-child(n+length) /</em>选择大于等于length后面的元素<em>/:nth-child(-n+length) /</em>选择小于等于length前面的元素<em>/:nth-child(n</em>length+1) /<em>表示隔几选一</em>/:nth-child(2n) / :nth-child(even) /<em>表示偶数</em>/:nth-child(2n+1) / :nth-child(odd) /<em>表示奇数</em>/</p><p><strong>关于:…-child和:…-of-type的差异</strong><br>这两个系列的属性确实很相似，对于不熟悉的人可能很难区分。<br>E:first-of-type 总是能命中父元素的第1个为E的子元素，不论父元素第1个子元素是否为E；而E:first-child里的E元素必须是它的兄弟元素中的第一个元素，否则匹配失效。E:last-of-type 与E:last-child也是同理。<br>E:nth-of-type(n)总是能命中父元素的第n个为E的子元素，不论父元素第n个子元素是否为E；而E:nth-child(n)会选择父元素的第n个子元素E，如果第n个子元素不是E，则是无效选择符，但n会递增。<br>关于:nth-child()与:nth-of-type()的区别可以看这篇文章</p><p><strong>用:empty区分空元素</strong><br>选择不包含子元素的div元素：</p><pre><code>div:empty</code></pre><p>选择包含子元素的div元素：</p><pre><code>div:not(:empty)</code></pre><h1 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h1><p><strong>文档流</strong><br>html文档流 元素是按照在html中的位置顺序进行排布的 (float 和绝对定位 会脱离文档流)</p><h2 id="static-默认"><a href="#static-默认" class="headerlink" title="static 默认"></a>static 默认</h2><pre><code>position:static</code></pre><p>定位的默认值，始终处于文档流中的位置</p><h2 id="fixed-固定"><a href="#fixed-固定" class="headerlink" title="fixed  固定"></a>fixed  固定</h2><pre><code>position:fixed</code></pre><p>相对于浏览器窗口指定位置 ps:当祖先元素中有transform 属性时，fixed不再会相对于浏览器窗口定位</p><h2 id="relative-相对定位"><a href="#relative-相对定位" class="headerlink" title="relative 相对定位"></a>relative 相对定位</h2><pre><code>position:relative</code></pre><p>相对于该元素在文档中的初始位置进行定位 通过 left top right bottom 来设置元素相对于自身位置进行偏移</p><h2 id="absolute-绝对定位"><a href="#absolute-绝对定位" class="headerlink" title="absolute 绝对定位"></a>absolute 绝对定位</h2><pre><code>position:absolute</code></pre><p>相对于最近的已定位的祖先元素进行定位，如果没有，那就相对于左上角进行定位</p>]]></content>
       
+      
+      <categories>
+          
+          <category> css </category>
+          
+      </categories>
       
       
     </entry>
@@ -116,7 +154,7 @@
       <link href="/2020/03/02/Docker%20Jenkins%20node%E9%A1%B9%E7%9B%AE%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/"/>
       <url>/2020/03/02/Docker%20Jenkins%20node%E9%A1%B9%E7%9B%AE%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><p>原本服务器长时间运行 产生的问题:<br> 1 手动部署 成本太高过程复杂，有时候项目中一个很小的改动，在服务器上部署，要去修改很多个地方<br> 2 服务器长时间的积累,内部文件 环境混乱<br> 3 重装系统成本太高 不方便迁移</p><h2 id="docker中的镜像和容器"><a href="#docker中的镜像和容器" class="headerlink" title="docker中的镜像和容器"></a>docker中的镜像和容器</h2><p>1 容器:个人理解，和虚拟机类似，但是与宿主主机共享操作系统内核，只提供一个隔离环境 或者称为沙箱</p><p>2 镜像:就像win10纯净版.rar文件，用来创建容器</p><p>以下是docker容器和虚拟机的区别</p><table><thead><tr><th align="left"></th><th align="right">Docker容器</th><th align="center">虚拟机</th></tr></thead><tbody><tr><td align="left">操作系统内核</td><td align="right">与宿主机共享操作系统内核</td><td align="center">需要在宿主的os上运行虚拟机os</td></tr><tr><td align="left">存储大小</td><td align="right">小</td><td align="center">大</td></tr><tr><td align="left">移植性</td><td align="right">灵活</td><td align="center">笨重</td></tr><tr><td align="left">部署速度</td><td align="right">快</td><td align="center">较慢</td></tr></tbody></table>]]></content>
       
       
       
